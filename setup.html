@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Load jQuery from CDN -->
+    <script src="https://code.jery.com/jquery-.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Fallback to local jQuery if CDN fails -->
+    <!-- <script>
+        if (!window.jQuery) {
+        //working properly because it is just checking it returns any object or refrence but here it returns undefined so condition becomes !(false)
+            document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>');
+            console.log("Entered");   
+        }
+    </script> -->
+    <!-- <script>
+        if (!jQuery()) {
+            //Not working properly because it is directly calling jQuery function which is undefined so throws error
+            document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>');
+            console.log("Entered");   
+        }
+    </script> -->
+    <script>
+        if (!window.$) {
+            //Not working properly because it is directly calling jQuery function which is undefined so throws error
+            document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>');
+            console.log("Entered");   
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello, jQuery!</h1>
+</body>
+</html>
